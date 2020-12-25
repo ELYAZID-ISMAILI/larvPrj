@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 6
+                    Laravel 6 Ensa Fes
                 </div>
 
                 <div class="links">
