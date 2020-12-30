@@ -54,5 +54,42 @@ class loginController extends Controller
         
         
     }
-    
+    public function userIndex()
+    {
+        if(session()->has('user')){
+            return redirect()->route("user.cart");
+        }
+
+        $res = Product::all();
+        $cat = Category::all();
+
+        return view('store.login')
+        ->with('products', $res)
+        ->with("cat", $cat);
+
+    }
+    public function userPosted(UserLoginVerifyRequest $request)
+    {
+        $user = User::where('email',$request->email)
+        ->where('password',$request->pass)
+        ->first();
+
+        if($user==null)
+        {
+            $request->session()->flash('message', 'Invalid User');
+    		
+            return redirect()->route('user.login');
+        }
+        else
+        {
+            $request->session()->put('user', $user);
+            return redirect()->route('user.home');
+        }
+    }
+    public function userLogout(Request $r)
+    {
+        $r->session()->flush();
+        return redirect()->route('user.home');
+    }
 }
+    

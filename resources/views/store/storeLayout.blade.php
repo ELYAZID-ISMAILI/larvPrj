@@ -24,12 +24,12 @@
             *       </ul>
             *        <ul class="header-links pull-right">
             *           @if(session()->has('user'))
-            *              <li><a style="color:white" href="{{route('user.history')}}">{{session()->get('user')->full_name}} </a></li>  
-            *              <li><a href="{{route('user.logout')}}"><i class="fa fa-user-o"></i> Logout</a></li>
+            *              <li><a style="color:white" href="">{{session()->get('user')->full_name}} </a></li>  
+            *              <li><a href=""><i class="fa fa-user-o"></i> Logout</a></li>
             *            @else
-            *           <li><a href="{{route('user.login')}}"><i class="fa fa-user-o"></i> Login</a></li>
+            *           <li><a href=""><i class="fa fa-user-o"></i> Login</a></li>
                         
-            *            <li><a href="{{route('user.signup')}}"><i class="fa fa-user-o"></i> SignUp</a></li>
+            *            <li><a href=""><i class="fa fa-user-o"></i> SignUp</a></li>
             *            @endif
                         
             *        </ul>
@@ -47,8 +47,8 @@
                         <!-- LOGO -->
                         <div class="col-md-3">
                             <div class="header-logo">
-                                <a href="{{route('user.home')}}" class="logo">
-                                    <img src="{{mix('img/logo.png')}}" alt="">
+                                <a href="" class="logo">
+                                    <img src="" alt="">
                                 </a>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                             <div class="header-ctn">
                                 <!-- Cart -->
                                 <div  class="dropdown">
-                                   /** <a class="dropdown-toggle " id="custom_shopping_cart" href="{{route('user.cart')}}">
+                                   /** <a class="dropdown-toggle " id="custom_shopping_cart" href="">
                                     *    <i class="fa fa-shopping-cart"></i>
                                     *    <span>Your Cart</span>
                                     * </a>
@@ -109,18 +109,7 @@
                 <div id="responsive-nav">
                     <!-- NAV -->
                     <ul class="main-nav nav navbar-nav">
-                        <li class="{{Route::is('user.home') ? 'active' : ''}}"><a href="{{route('user.home')}}">Home</a></li>
-                        @if(Route::is('user.search'))
-                            @foreach($cat as $c)
-                            <li class="{{$c->id == $a ? 'active' : ''}}"><a href="{{route('user.search.cat',['id'=>$c->id])}}" >{{$c->name}}</a></li>
-                            @endforeach
-                            <li class="{{$a == -1  ? 'active' : ''}}"><a href="search">Browse All</a></li>
-                        @else
-                            @foreach($cat as $c)
-                            <li ><a href="{{route('user.search.cat',['id'=>$c->id])}}" >{{$c->name}}</a></li>
-                            @endforeach
-                            <li ><a href="{{route('user.search')}}">Browse All</a></li>
-                        @endif
+                        
                         
                     </ul>
                     <!-- /NAV -->
@@ -152,11 +141,11 @@
                     <div class="col-md-4 col-xs-6">
                         <div class="shop">
                             <div class="shop-img">
-                                <img src="./img/shop0{{$index++}}.png" alt="">
+                                <img src="" alt="">
                             </div>
                             <div class="shop-body">
                                 <h3>{{$c->name}}</h3>
-                                <a href="search?c={{$c->id}}" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                                <a href="" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
