@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdminLoginVerifyRequest extends FormRequest
+class ProductEditVerifyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,14 @@ class AdminLoginVerifyRequest extends FormRequest
      */
     public function rules()
     {
-       // dd(1);
         return [
-            'Username' => 'required|max:20',
-            'Password' => 'required|max:20:min:6'
+            'Name' => 'required|max:50',
+            'Description' => 'required',
+            'Price' => 'required|numeric',
+            'Discounted_Price' => 'required|numeric',
+            
+            'Colors' => 'required',
+            'Tags' => 'required'
         ];
     }
 }
