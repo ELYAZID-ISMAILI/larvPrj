@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Http\Requests\AdminLoginVerifyRequest;
 use App\Http\Requests\UserLoginVerifyRequest;

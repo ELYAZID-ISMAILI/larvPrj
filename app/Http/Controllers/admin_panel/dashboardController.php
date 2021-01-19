@@ -13,9 +13,5 @@ class dashboardController extends Controller
         return view('admin_panel.dashboard.index')
         ->with('sales',$sales);
     }
-    public function yes(){
-        $sales =  sale::all();
-        return view('admin_panel.dashboard.yes')
-        ->with('sales',$sales);
-    }
+
 }

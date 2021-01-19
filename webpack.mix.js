@@ -15,3 +15,4 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
     mix.styles('node_modules/bootstrap/dist/css/bootstrap.min.css','public/css/theme.css');
+    mix.scripts('node_modules/bootstrap/dist/js/bootstrap.min.js','public/js/scripts.js');
