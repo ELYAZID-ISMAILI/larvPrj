@@ -8,13 +8,15 @@
     <title>Star Admin Dashboard</title>
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
     <link rel="stylesheet" href="{{mix('/css/theme.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
     
     
 </head>
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{route('admin.dashboard')}}">
                     <img src="/img/logo.png" alt="" width="30" height="24">
