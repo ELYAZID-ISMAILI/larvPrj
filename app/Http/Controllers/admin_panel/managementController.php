@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin_panel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Arr;
 use App\Product;
 use App\Category;
 use App\sale;
@@ -29,12 +30,12 @@ class managementController extends Controller
         {
 
            // echo "select * from users inner join addresses on users.address_id = addresses.id where users.id = $r->user_id" .'<br>';
-            $users[] = DB::select( DB::raw("select users.id as id , users.full_name as full_name from users  where users.id = $r->user_id" ) )[0];
+            $users[] = DB::select( DB::raw("select users.id as id , users.full_name as full_name , addresses.area as area , addresses.city as city , addresses.postal_code as postal_code from users inner join addresses on users.address_id = addresses.id where users.id = $r->user_id" ) )[0];
              //$users[]=User::find($r->user_id)->with('addresses')->get();
              $totalCart = explode(',',$r->product_id);
              foreach($totalCart as $c)
              {
-                $cart[]=array_prepend(explode(':',$c), $r->id);
+                $cart[]=Arr::prepend(explode(':',$c), $r->id);
                 $a=explode(':',$c);
                 $res = Product::find($a[0]);
                 $product[]=$res;
@@ -78,7 +79,7 @@ class managementController extends Controller
              $totalCart = explode(',',$r->product_id);
              foreach($totalCart as $c)
              {
-                 $cart[]=array_prepend(explode(':',$c), $r->id);
+                 $cart[]=Arr::prepend(explode(':',$c), $r->id);
                 $a=explode(':',$c);
                 $res = Product::find($a[0]);
                 $product[]=$res;

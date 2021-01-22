@@ -18,11 +18,17 @@ class user extends Model
         'password',
         'phone',
         'prev_password',
-        'address_id'
+        'address_id',
+        'sale_id'
+
     ];
 
-   /* public function addresses()
+   public function addresses()
     {
     	return $this->hasMany('App\Address', 'id', 'address_id');
-    }*/
+    }
+    public function sales()
+    {
+    	return $this->hasMany('App\Sale', 'id', 'sale_id');
+    }
 }

@@ -52,7 +52,7 @@
                                         {{$prd->description}}
                                     </td>
                                     <td>
-                                       
+                                        {{$prd->category->name}}
                                     </td>
                                     
                                     <td><a href="{{route('admin.products.edit', ['id' => $prd->id])}}" class="btn btn-warning">Edit</a> </td>

@@ -18,8 +18,8 @@ class Sale extends Model
         'price'
     ];
 
-   /* public function sales()
+    public function users()
     {
-    	
-    }*/
+    	return $this->belongsTo('App\User','user_id','id');
+    }
 }

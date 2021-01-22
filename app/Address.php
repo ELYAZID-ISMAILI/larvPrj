@@ -16,8 +16,8 @@ class Address extends Model
        'postal_code',
    ];
 
-  /* public function user()
+   public function user()
    {
-       return $this->belongsTo('App\User','id','address_id');
-   }*/
+       return $this->belongsTo('App\User','user_id','id');
+   }
 }

@@ -16,10 +16,13 @@ class CreateSalesTable extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned();
-            $table->text('product_id');
+            $table->integer('product_id');
             $table->text('order_status');
             $table->bigInteger('price');
             $table->timestamps();
+            $table->foreign('user_id')
+            ->references('id')->on('users')
+            ->onDelete('cascade');
         });
     }
 
