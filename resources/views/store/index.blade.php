@@ -16,7 +16,6 @@
                 <!-- /section title -->
 
                 <!-- Products tab & slick -->
-            
                 <div class="col-md-12">
                     <div class="row">
 
@@ -33,14 +32,14 @@
                                 </div>
                                 <div class="product-body">
                                     <p class="product-category">{{$product->category->name}}</p>
-                                   // <h3 class="product-name"><a href="{{route('user.view',['id'=>$product->id])}}">{{$product->name}}</a></h3>
-                                    <h4 class="product-price">TK {{$product->discount}} <del class="product-old-price">TK {{$product->price}}</del></h4>
+                                    <h3 class="product-name"><a href="{{route('user.view',['id'=>$product->id])}}">{{$product->name}}</a></h3>
+                                    <h4 class="product-price">DH {{$product->discount}} <del class="product-old-price">DH {{$product->price}}</del></h4>
                                     <div class="product-rating">
                                     </div>
                                     
                                 </div>
                                 <div class="add-to-cart">
-                               //     <a class="add-to-cart-btn" href="{{route('user.view',['id'=>$product->id])}}"><i class="fa fa-shopping-cart"></i>Purchase</a>
+                                    <a class="add-to-cart-btn" href="{{route('user.view',['id'=>$product->id])}}"><i class="fa fa-shopping-cart"></i>Purchase</a>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +48,6 @@
                     </div>
                     
                 </div>
-        
                 <!-- /row -->
             </div>
             <!-- /container -->

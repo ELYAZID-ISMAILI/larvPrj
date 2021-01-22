@@ -102,7 +102,7 @@ class userController extends Controller
         return redirect()->route('user.home');
     }
     public function cart(Request $r)
-    {   //Session::forget('cart');
+    {   Session()::forget('cart');
         $res = Product::all();
         $cat = Category::all();
         if(!Session()::has('cart'))

@@ -17,7 +17,7 @@
     <!-- HEADER -->
     <header>
         <!-- TOP HEADER -->
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <nav class="navbar navbar-expand navbar-dark bg-success">
             <div class="container-fluid">
                 <div class="container">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
@@ -42,7 +42,7 @@
         <!-- /TOP HEADER -->
 
         <!-- MAIN HEADER -->
-        <nav class="navbar navbar-expand navbar-dark bg-light">
+        <nav class="navbar navbar-expand navbar-dark bg-primary">
             <div id="header">
                 <!-- container -->
                 <div class="navbar-nav me-auto mb-2 mb-sm-0">
@@ -52,6 +52,7 @@
                         <div class="col-md-3">
                             <div class="header-logo">
                                 <a href="{{route('user.home')}}" class="logo">
+                                    <img src="{{asset('img/youcan.png')}}" alt="">
                                    
                                 </a>
                             </div>
@@ -73,7 +74,7 @@
     
                         <!-- ACCOUNT -->
                         <div class="col-md-3 clearfix">
-                            <div class="header-ctn">
+                            <div class="nav-item">
                                 <!-- Cart -->
                                 <div  class="dropdown">
                                     <a class="dropdown-toggle " id="custom_shopping_cart" href="{{route('user.cart')}}">
@@ -113,7 +114,7 @@
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="main-nav nav navbar-nav">
-                    <li class="{{Route::is('user.home') ? 'active' : ''}}"><a href="{{route('user.home')}}">Home</a></li>
+                    <li class="{{Route::is('user.home') ?  : ''}}"><a href="{{route('user.home')}}">Home</a></li>
                     @if(Route::is('user.search'))
                         @foreach($cat as $c)
                         <li class="{{$c->id == $a ? 'active' : ''}}"><a href="{{route('user.search.cat',['id'=>$c->id])}}" >{{$c->name}}</a></li>
@@ -178,6 +179,24 @@
     @yield('content')
 
     <!-- /SECTION -->
+    <br>
+    <section class="home-newsletter">
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+            <div class="single">
+                <h2>Subscribe to our Newsletter</h2>
+            <div class="input-group">
+                 <input type="email" class="form-control" placeholder="Enter your email">
+                 <span class="input-group-btn">
+                 <button class="btn btn-theme" type="submit">Subscribe</button>
+                 </span>
+                  </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </section>
     
     <div id="newsletter" class="section">
         <!-- container -->
@@ -186,24 +205,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="newsletter">
-                        <p>Sign Up for the <strong>NEWSLETTER</strong></p>
-                        <form>
-                            <input class="input" type="email" placeholder="Enter Your Email">
-                            <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
-                        </form>
+                        
                         <ul class="newsletter-follow">
-                            <li>
+                            <div align="center">
+                            <li class="aligne">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li>
+                            <li class="aligne">
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li>
+                            <li class="aligne">
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
+                            
+                        </div>
                         </ul>
                     </div>
                 </div>
@@ -225,13 +240,8 @@
                     <div class="col-md-3 col-xs-6" >
                         <div class="footer" >
                             <h3 class="footer-title">About Us</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut.</p>
-                            <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                                <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-                                <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
-                            </ul>
+                            <p>Site de Vente des Produits Embarque dedies pour Les Eleves Ingenieurs.</p>
+                           
                         </div>
                     </div>
 
@@ -239,7 +249,7 @@
                         <div class="footer">
                             <h3 class="footer-title">Categories</h3>
                             <ul class="footer-links">
-                                <li><a href="#">Hot deals</a></li>
+                                <li><a href="#">Dropshipping</a></li>
                                 <li><a href="#">Laptops</a></li>
                                 <li><a href="#">Smartphones</a></li>
                                 <li><a href="#">Cameras</a></li>
@@ -282,27 +292,8 @@
         </div>
         <!-- /top footer -->
 
-        <!-- bottom footer -->
-        <div id="bottom-footer" class="section">
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="footer-payments">
-                            <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-                            <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /bottom footer -->
+       
+        
     </footer>
     <!-- /FOOTER -->
 
