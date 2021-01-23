@@ -52,14 +52,15 @@ Route::group(['middleware' => 'admin'], function(){
 });
 
 
-Route::get('/login', 'loginController@userIndex')->name('user.login');
+    });
+ Route::get('/login', 'loginController@userIndex')->name('user.login');
 Route::post('/login', 'loginController@userPosted');
-
 
 //signup
 Route::get('/signup', 'signupController@userIndex')->name('user.signup');
 Route::post('/signup', 'signupController@userPosted');
 Route::post('/check_email', 'signupController@emailCheck')->name('user.signup.check_email');
+
 
 //user
 Route::get('/', 'user\userController@index')->name('user.home');
@@ -67,6 +68,8 @@ Route::get('/product/{id}', 'user\userController@view')->name('user.product');
 
 Route::get('/search', 'user\userController@search')->name('user.search');
 Route::get('/search?c={id}', 'user\userController@view')->name('user.search.cat');
+
+
 
 Route::get('/view/{id}', 'user\userController@view')->name('user.view');
 Route::post('/view/{id}', 'user\userController@post');
@@ -79,7 +82,6 @@ Route::post('/delete_item_from_cart', 'user\userController@deleteCartItem')->nam
 
 
 Route::get('/logout', 'loginController@userLogout')->name('user.logout');
-
 
 Route::group(['middleware' => 'user'], function(){
 Route::get('/history', 'user\userController@history')->name('user.history');
