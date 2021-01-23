@@ -51,8 +51,6 @@ Route::group(['middleware' => 'admin'], function(){
 
 });
 
-
-    });
  Route::get('/login', 'loginController@userIndex')->name('user.login');
 Route::post('/login', 'loginController@userPosted');
 
