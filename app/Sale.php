@@ -15,7 +15,8 @@ class Sale extends Model
         'user_id',
         'product_id',
         'order_status',
-        'price'
+        'price',
+        'user_id'
     ];
 
     public function users()

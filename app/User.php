@@ -19,16 +19,15 @@ class user extends Model
         'phone',
         'prev_password',
         'address_id',
-        'sale_id'
 
     ];
 
    public function addresses()
     {
-    	return $this->hasMany('App\Address', 'id', 'address_id');
+    	return $this->hasMany('App\Address', 'user_id', 'id');
     }
-    public function sales()
+   /* public function sales()
     {
-    	return $this->hasMany('App\Sale', 'id', 'sale_id');
-    }
+    	return $this->hasMany('App\Sale', 'user_id', 'id');
+    }*/
 }
