@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\orderRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Arr;
 use App\Product;
 use App\Category;
 use App\sale;
@@ -197,11 +198,11 @@ class userController extends Controller
                 Session()::put('price',$cost);
                
             }
-            //dd(Session::get('price'));
+            dd(Session()->get('price'));
             //end 
             //dd($myarr);
-            $szn[0]=Session()::get('cart');
-            $szn[1]=Session()::get('price');
+            $szn[0]=Session()->get('cart');
+            $szn[1]=Session()->get('price');
             $szn[2]=$cost;
             
 
@@ -335,7 +336,7 @@ class userController extends Controller
              $totalCart = explode(',',$r->product_id);
              foreach($totalCart as $c)
              {
-                $cart[]=array_prepend(explode(':',$c),$r->id);
+                $cart[]=Arr::prepend(explode(':',$c),$r->id);
                 $a=explode(':',$c);
                 $res = Product::find($a[0]);
                 $product[]=$res;

@@ -44,7 +44,7 @@ class signupController extends Controller
             'email' => 'required|email|unique:users',
             'address' => 'required',
             'city' => 'required',
-            'zip' => 'required|numeric',
+            'postal_code' => 'required|numeric',
             'tel' => 'required|numeric',
             'pass' => 'required|min:5',
             'confirm_password' => 'required|min:5|same:pass'
@@ -55,7 +55,7 @@ class signupController extends Controller
             $add=new Address();
             $add->area=$r->address;
             $add->city=$r->city;
-            $add->zip=$r->zip;
+            $add->postal_code=$r->postal_code;
 
             $add->save();
             $add_id=$add->id;
