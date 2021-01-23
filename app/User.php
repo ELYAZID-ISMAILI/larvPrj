@@ -18,8 +18,7 @@ class user extends Model
         'password',
         'phone',
         'prev_password',
-        'address_id',
-
+        'address_id'
     ];
 
    public function addresses()
