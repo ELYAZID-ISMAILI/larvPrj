@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="product-price">TK {{$product->discount}} <del class="product-old-price">TK {{$product->price}}</del></h3>
+                        <h3 class="product-price"> {{$product->discount}} DH <del class="product-old-price"> {{$product->price}} DH</del></h3>
                         <span class="product-available">In Stock</span>
                     </div>
                     <p>{!!$product->description!!}</p>

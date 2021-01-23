@@ -34,7 +34,7 @@
                                 <div class="product-body">
                                     <p class="product-category">{{$product->category->name}}</p>
                                    // <h3 class="product-name"><a href="{{route('user.view',['id'=>$product->id])}}">{{$product->name}}</a></h3>
-                                    <h4 class="product-price">TK {{$product->discount}} <del class="product-old-price">TK {{$product->price}}</del></h4>
+                                    <h4 class="product-price"> {{$product->discount}} DH <del class="product-old-price"> {{$product->price}} DH </del></h4>
                                     <div class="product-rating">
                                     </div>
                                     
