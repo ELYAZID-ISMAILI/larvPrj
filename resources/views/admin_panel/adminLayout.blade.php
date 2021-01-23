@@ -8,7 +8,8 @@
     <title>Star Admin Dashboard</title>
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
     <link rel="stylesheet" href="{{mix('/css/theme.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+   
+    
 
     
     
@@ -16,12 +17,12 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark  ">
+        <nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #035518;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{route('admin.dashboard')}}">
                     <img src="/img/logo.png" alt="" width="30" height="24">
                     Dashboard
-                  </a>
+                </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -45,7 +46,7 @@
                    
                 </footer>
             </div>
-         
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

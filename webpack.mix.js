@@ -16,3 +16,4 @@ mix.js('resources/js/app.js', 'public/js')
 
     mix.styles('node_modules/bootstrap/dist/css/bootstrap.min.css','public/css/theme.css');
     mix.scripts('node_modules/bootstrap/dist/js/bootstrap.min.js','public/js/scripts.js');
+    mix.scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js','public/js/scripts1.js');

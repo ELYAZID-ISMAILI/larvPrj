@@ -33,10 +33,6 @@ Route::group(['middleware' => 'admin'], function(){
     Route::post('/admin_panel/categories/delete/{id}', 'admin_panel\categoriesController@destroy');
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 28afb9055081a2387129cfa65e2dae9129810231
     //products
     Route::get('/admin_panel/products', 'admin_panel\productsController@index')->name('admin.products');
 
@@ -54,8 +50,7 @@ Route::group(['middleware' => 'admin'], function(){
     Route::post('/admin_panel/management', 'admin_panel\managementController@update')->name('admin.orderUpdate');
 
 });
-<<<<<<< HEAD
-=======
+
 
 Route::get('/login', 'loginController@userIndex')->name('user.login');
 Route::post('/login', 'loginController@userPosted');
@@ -89,4 +84,4 @@ Route::get('/logout', 'loginController@userLogout')->name('user.logout');
 Route::group(['middleware' => 'user'], function(){
 Route::get('/history', 'user\userController@history')->name('user.history');
     });
->>>>>>> 28afb9055081a2387129cfa65e2dae9129810231
+    
