@@ -23,7 +23,7 @@
 
                         @foreach($products as $product)
                         <!-- product -->
-                        <div class="col-md-3">
+                        <div class="col-md-3" id="backgr">
                             <div class="product">
                                 <div class="product-img">
                                     <img src="uploads/products/{{$product->id}}/{{$product->image_name}}" alt="">

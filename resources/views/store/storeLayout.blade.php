@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="{{mix('/css/theme.css')}}">
     <title>Web site E-Commerce</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
    
 </head>
 
@@ -17,10 +18,10 @@
     <!-- HEADER -->
     <header>
         <!-- TOP HEADER -->
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <nav class="navbar navbar-expand  navbar-dark bg-dark" role="navigation">
             <div class="container-fluid">
                 <div class="container">
-                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <ul class="navbar-nav me-auto mb-0 mb-sm-0">
                         <li class="nav-item active"><a href="#"><i class="fa fa-phone"></i> +070-60-91-99</a></li><br>
                         <li class="nav-item active"><a href="#"><i class="fa fa-envelope-o"></i> support@electro.com</a></li><br>
                         <li class="nav-item active"><a href="#"><i class="fa fa-map-marker"></i> Meknes, Zitoune 11</a></li><br>
@@ -42,7 +43,7 @@
         <!-- /TOP HEADER -->
 
         <!-- MAIN HEADER -->
-        <nav class="navbar navbar-expand navbar-dark bg-light">
+        <nav class="navbar navbar-expand navbar-dark bg-info">
             <div id="header">
                 <!-- container -->
                 <div class="navbar-nav me-auto mb-2 mb-sm-0">
@@ -51,6 +52,7 @@
                         <!-- LOGO -->
                         <div class="col-md-3">
                             <div class="header-logo">
+                                <a class="navbar-brand" href="#"><img src="img/youcan.png" alt=""></a>
                                 <a href="{{route('user.home')}}" class="logo">
                                    
                                 </a>
@@ -59,12 +61,12 @@
                         <!-- /LOGO -->
     
                         <!-- SEARCH BAR -->
-                        <div class="col-md-6">
-                            <div class="header-search">
+                        <div class="col-md-3 ">
+                            <div class="header-search" class="navbar-center">
                                 <form action="{{route('user.search')}}" method="get">
                                     <div class="custom_search_top" >
                                         <input class="input" style="border-radius: 40px 0px 0px 40px;" name="n" placeholder="Search here">
-                                        <button  class="search-btn">Search</button>
+                                        <button  class="search-btn" class="btn btn-outline-success my-2 my-sm-0">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -72,11 +74,11 @@
                         <!-- /SEARCH BAR -->
     
                         <!-- ACCOUNT -->
-                        <div class="col-md-3 clearfix">
+                        <div class="navbar-nav ml-auto" >
                             <div class="header-ctn">
                                 <!-- Cart -->
-                                <div  class="dropdown">
-                                    <a class="dropdown-toggle " id="custom_shopping_cart" href="{{route('user.cart')}}">
+                                <div  class="dropdown" class="navbar-nav">
+                                    <a class="dropdown-toggle " class="text-sm-left" id="custom_shopping_cart" href="{{route('user.cart')}}">
                                         <i class="fa fa-shopping-cart"></i>
                                         <span>Your Cart</span>
                                     </a>
@@ -85,12 +87,7 @@
                                 <!-- /Cart -->
     
                                 <!-- Menu Toogle -->
-                                <div class="menu-toggle pull-right">
-                                    <a href="#">
-                                        <i class="fa fa-bars"></i>
-                                        <span>Menu</span>
-                                    </a>
-                                </div>
+                                
                                 <!-- /Menu Toogle -->
                             </div>
                         </div>
@@ -179,32 +176,35 @@
 
     <!-- /SECTION -->
     
-    <div id="newsletter" class="section">
-        <!-- container -->
+    <section class="home-newsletter">
         <div class="container">
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="newsletter">
-                        <p>Sign Up for the <strong>NEWSLETTER</strong></p>
-                        <form>
-                            <input class="input" type="email" placeholder="Enter Your Email">
-                            <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
-                        </form>
-                        <ul class="newsletter-follow">
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                        </ul>
+        <div class="row">
+        <div class="col-sm-12">
+            <div class="single">
+                <h2>Subscribe to our Newsletter</h2>
+            <div class="input-group">
+                 <input type="email" class="form-control" placeholder="Enter your email">
+                 <span class="input-group-btn">
+                 <button class="btn btn-theme" type="submit">Subscribe</button>
+                 </span>
+            </div>
+            </div>
+        </div>
+        <ul class="newsletter-follow" class="bi bi-align-center">
+            <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+        </div>
+        </div>
+        </section>
+                        
                     </div>
                 </div>
             </div>
@@ -225,17 +225,13 @@
                     <div class="col-md-3 col-xs-6" >
                         <div class="footer" >
                             <h3 class="footer-title">About Us</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut.</p>
-                            <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                                <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-                                <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
-                            </ul>
+                            <p>Site For Electronic Devices and Components
+                            </p>
+                            
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-xs-6">
+                    <div class="col-md-3 col-xs-3">
                         <div class="footer">
                             <h3 class="footer-title">Categories</h3>
                             <ul class="footer-links">
@@ -283,28 +279,11 @@
         <!-- /top footer -->
 
         <!-- bottom footer -->
-        <div id="bottom-footer" class="section">
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="footer-payments">
-                            <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-                            <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
-        </div>
+        
         <!-- /bottom footer -->
     </footer>
     <!-- /FOOTER -->
+    
 
 
     <!-- jQuery Plugins -->
