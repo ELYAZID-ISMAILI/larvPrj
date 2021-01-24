@@ -6,8 +6,8 @@
                 <div class="card-body">
                     <h4 class="card-title">Products Table <a class="btn btn-lg btn-success" style="float:right;color:white" href="{{route('admin.products.create')}}">+ Add Product</a></h4>
                     <br><br>
-                    <div class="container-fluid">
-                       <center> <table class="table">
+                    <div class="table-responsive">
+                       <center> <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>

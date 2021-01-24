@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Star Admin Dashboard</title>
-    <link rel="stylesheet" href="{{mix('/css/app.css')}}">
     <link rel="stylesheet" href="{{mix('/css/theme.css')}}">
    
     
@@ -19,18 +18,18 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #035518;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{route('admin.dashboard')}}">
-                    <img src="/img/logo.png" alt="" width="30" height="24">
-                    Dashboard
+                 <a class="navbar-brand" href="{{route('admin.dashboard')}}">
+                    <img src="/img/youcan.png" alt="youcan" width="100" height="30">
+                    <strong> Dashboard </strong>
                 </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="{{route('admin.products')}}">Products</a>
-                  <a class="nav-link" href="{{route('admin.categories')}}">Categories</a>
-                  <a class="nav-link" href="{{route('admin.orderManagement')}}">Order Management</a>
+                  <a class="nav-link" href="{{route('admin.products')}}"> <strong>Products</strong></a>
+                  <a class="nav-link" href="{{route('admin.categories')}}"> <strong>Categories</strong></a>
+                  <a class="nav-link" href="{{route('admin.orderManagement')}}"> <strong>Order Management</strong></a>
                 </div>
                 <div class="navbar-nav ml-auto">
                   <a class="nav-link" href="{{route('admin.logout')}}"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
