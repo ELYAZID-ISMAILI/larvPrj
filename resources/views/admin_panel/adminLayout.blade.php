@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Star Admin Dashboard</title>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ff2d00c507cac9ca6034704a73b7861ca60f084
     <link rel="stylesheet" href="{{mix('/css/theme.css')}}">
    
     
