@@ -55,6 +55,7 @@ class loginController extends Controller
         
         
     }
+    
     public function userIndex()
     {
         if(session()->has('user')){
@@ -69,6 +70,7 @@ class loginController extends Controller
         ->with("cat", $cat);
 
     }
+
     public function userPosted(UserLoginVerifyRequest $request)
     {
         $user = User::where('email',$request->email)
@@ -93,4 +95,3 @@ class loginController extends Controller
         return redirect()->route('user.home');
     }
 }
-    

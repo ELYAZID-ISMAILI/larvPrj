@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sale extends Model
+class sale extends Model
 {
-        /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -15,12 +15,11 @@ class Sale extends Model
         'user_id',
         'product_id',
         'order_status',
-        'price',
-        'user_id'
+        'price'
     ];
 
-    public function users()
+    public function sales()
     {
-    	return $this->belongsTo('App\User','user_id','id');
+    	
     }
 }

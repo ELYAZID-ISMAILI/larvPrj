@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateAdminsTable extends Migration
 {
@@ -15,9 +15,9 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('username')->unique();    
+            $table->string('username');    
             $table->string('password');
-            $table->string('full_name');
+            $table->string('name');
             $table->timestamps();
         });
     }

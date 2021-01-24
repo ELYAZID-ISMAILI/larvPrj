@@ -94,7 +94,7 @@ label.error {
                                 echo $tot;
                                 @endphp
                                 
-                                TK</div></div>
+                                DH</div></div>
                                 
 						</div>
                         
@@ -110,7 +110,7 @@ label.error {
                     </div>
                     <div class="order-col">
                         <div><strong>TOTAL</strong></div>
-                        <div ><strong class="order-total" id="totalCost">{{Session::get('price')}} TK</strong></div>
+                        <div ><strong class="order-total" id="totalCost">{{Session::get('price')}} DH</strong></div>
                     </div>
                     @else
                     <div class="order-col">
@@ -226,8 +226,8 @@ label.error {
             data:{pid: product_id, newQ:x, oSerial:order_serial, _token: token},
             success:function(msg)
             {
-                document.getElementById("individualPrice_"+order_serial).innerHTML=x*product_price+" TK";
-                document.getElementById("totalCost").innerHTML = msg[2]+" TK";
+                document.getElementById("individualPrice_"+order_serial).innerHTML=x*product_price+" DH";
+                document.getElementById("totalCost").innerHTML = msg[2]+" DH";
             }
             });
         
@@ -254,8 +254,8 @@ label.error {
             data:{pid: product_id, newQ:x, oSerial:order_serial, _token: token},
             success:function(msg)
             {
-                document.getElementById("individualPrice_"+order_serial).innerHTML=x*product_price+" TK";
-                document.getElementById("totalCost").innerHTML = msg[2]+" TK";
+                document.getElementById("individualPrice_"+order_serial).innerHTML=x*product_price+" DH";
+                document.getElementById("totalCost").innerHTML = msg[2]+" DH";
 
             }
             });

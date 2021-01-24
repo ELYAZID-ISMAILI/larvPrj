@@ -242,7 +242,7 @@ class productsController extends Controller
             if (( $file != '.' ) && ( $file != '..' )) {
                 $full = $src . '/' . $file;
                 if ( is_dir($full) ) {
-                    rrmdir($full);
+                    rmdir($full);
                 }
                 else {
                     unlink($full);

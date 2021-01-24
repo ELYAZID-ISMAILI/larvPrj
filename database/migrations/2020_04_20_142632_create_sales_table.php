@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateSalesTable extends Migration
 {
@@ -14,15 +14,15 @@ class CreateSalesTable extends Migration
     public function up()
     {
         Schema::create('sales', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('product_id');
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
+            $table->text('product_id');
             $table->text('order_status');
             $table->bigInteger('price');
             $table->timestamps();
-            $table->foreign('user_id')
-            ->references('id')->on('users')
-            ->onDelete('cascade');
         });
     }
 

@@ -31,8 +31,11 @@ class managementController extends Controller
 
            //echo "select * from users inner join addresses on users.address_id = addresses.id where users.id = $r->user_id" .'<br>';
            
-           $users[] = DB::select( DB::raw("select users.id as id , users.full_name as full_name , addresses.area as area , addresses.city as city , addresses.postal_code as postal_code from users inner join addresses on users.address_id = addresses.id where users.id = $r->user_id" ) )[0];
+          $users[] = DB::select( DB::raw("select users.id as id , users.full_name as full_name , addresses.area as area , addresses.city as city , addresses.zip as zip from users inner join addresses on users.address_id = addresses.id where users.id = $r->user_id" ) )[0];
              //$users[]=User::find($r->user_id)->with('addresses')->get();
+             //dd($users);
+            //dd($users);
+            
              $totalCart = explode(',',$r->product_id);
              foreach($totalCart as $c)
              {

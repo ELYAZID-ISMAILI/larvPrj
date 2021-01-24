@@ -20,6 +20,7 @@ class verifyUser
            // dd(1);
            return $next($request);
         }
-        return redirect()->route('user.home');
+        return redirect()->route('user.home'); 
     }
+
 }
