@@ -9,68 +9,69 @@
         <div class="container">
             <!-- row -->
             <div class="row">
-    
-            <form id="signupForm" method="post" >
-                {{csrf_field()}}
-                <div class="col-md-12">
-                    <!-- Billing Details -->
-                    <div class="billing-details">
-                        <div class="section-title">
-                            <h3 class="title">SIGN UP</h3>
+                <form id="signupForm" method="post">
+                    {{csrf_field()}}
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="name">Full Name</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Full Name">
                         </div>
-                        
-                        <div class="form-group ">
-                            <input class="input" type="text" name="name" id="name" placeholder="Full Name">
-                        </div>
-                       {!! $errors->first('name', '<label class="error">:message</label>') !!}
-                        
-                        <div class="form-group">
-                            <input class="input" type="email" name="email" id="email" placeholder="Email" onkeyup="myFunction()">
+                            {!! $errors->first('name', '<label class="error">:message</label>') !!}
+                        <div class="form-group col-md-10">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" onkeyup="myFunction()">
                         </div>
                         <div id="for_duplicate-email"></div>
                          {!! $errors->first('email', '<label class="error">:message</label>') !!}
-                        <div class="form-group">
-                            <input class="input" type="text" name="address" id="address" placeholder="Address">
-                        </div>
-                         {!! $errors->first('address', '<label class="error">:message</label>') !!}
-                        <div class="form-group">
-                            <input class="input" type="text" name="city" id="city" placeholder="City">
-                        </div>
-                         {!! $errors->first('city', '<label class="error">:message</label>') !!}
-                        <div class="form-group">
-                            <input class="input" type="text" name="zip" id="zip" placeholder="ZIP Code">
-                        </div>
-                         {!! $errors->first('zip', '<label class="error">:message</label>') !!}
-                        <div class="form-group">
-                            <input class="input" type="tel" name="tel" id="tel" placeholder="Telephone">
-                        </div>
-                         {!! $errors->first('tel', '<label class="error">:message</label>') !!}
-                        <div class="form-group">
-                            <input class="input" type="password" name="pass" id="pass" placeholder="Enter Your Password">
-                        </div>
-                         {!! $errors->first('pass', '<label class="error">:message</label>') !!}
-                        <div class="form-group">
-                            <input class="input" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
-                        </div>
-                        {!! $errors->first('confirm_password', '<label class="error">:message</label>') !!}
-    
-    
-                        <br>
-                            
-                            <input type="submit"  name="signup" class="primary-btn order-submit" value="Sign Up">
-                    </form>
-                    
-                    
-                        
                     </div>
-                    <!-- /Billing Details -->
-                </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="address">Address</label>
+                            <input class="form-control" type="text" name="address" id="address" placeholder="Address">
+                        </div>
+                          {!! $errors->first('address', '<label class="error">:message</label>') !!}
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                                <label for="city">City</label>
+                                <input class="form-control" type="text" name="city" id="city" placeholder="City">
+                        </div>
+                             {!! $errors->first('city', '<label class="error">:message</label>') !!}
+                    
+                        <div class="form-group col-md-4">
+                                <label for="zip">ZIP Code</label>
+                                <input class="form-control" type="text" name="zip" id="zip" placeholder="ZIP Code">
+                        </div>
+                             {!! $errors->first('zip', '<label class="error">:message</label>') !!}
+                        <div class="form-group col-md-5">
+                                <label for="tel">Telephone</label>
+                                <input class="form-control" type="tel" name="tel" id="tel" placeholder="Telephone">
+                        </div>
+                             {!! $errors->first('tel', '<label class="error">:message</label>') !!}
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="pass">Enter Your Password</label>
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Password">
+                      </div>
+                      {!! $errors->first('pass', '<label class="error">:message</label>') !!}
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input class="form-control" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+                      </div>
+                     {!! $errors->first('confirm_password', '<label class="error">:message</label>') !!}
+                    </div>
+                   
+                    <button type="submit" name="signup" class="btn btn-primary">Sign Up</button>
+                </form>
     
             </div>
             <!-- /row -->
         </div>
         <!-- /container -->
-    </div>
+</div>
 
 <!--JQUERY Validation-->
 <script>

@@ -6,10 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Star Admin Dashboard</title>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ff2d00c507cac9ca6034704a73b7861ca60f084
     <link rel="stylesheet" href="{{mix('/css/theme.css')}}">
    
     
@@ -20,7 +16,7 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #035518;">
+        <nav class="navbar navbar-expand-md  navbar-light" style="background-color: #035518;">
             <div class="container-fluid">
                  <a class="navbar-brand" href="{{route('admin.dashboard')}}">
                     <img src="/img/youcan.png" alt="youcan" width="100" height="30">
