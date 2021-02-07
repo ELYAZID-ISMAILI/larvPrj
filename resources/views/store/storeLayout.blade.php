@@ -229,7 +229,7 @@
                             <div class="w-25">
                                 <div class="footer">
                                     <h3 class="footer-title">Categories</h3>
-                                    <ul class="footer-links">
+                                    <ul style="list-style-type:none;" class="footer-links">
                                         <li><a href="#">Hot deals</a></li>
                                         <li><a href="#">Laptops</a></li>
                                         <li><a href="#">Smartphones</a></li>
@@ -244,7 +244,7 @@
                             <div class="w-25">
                                 <div class="footer">
                                     <h3 class="footer-title">Information</h3>
-                                    <ul class="footer-links">
+                                    <ul style="list-style-type:none;" class="footer-links">
                                         <li><a href="#">About Us</a></li>
                                         <li><a href="#">Contact Us</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
@@ -257,7 +257,7 @@
                             <div class="w-25">
                                 <div class="footer">
                                     <h3 class="footer-title">Service</h3>
-                                    <ul class="footer-links">
+                                    <ul style="list-style-type:none;" class="footer-links" >
                                         <li><a href="#">My Account</a></li>
                                         <li><a href="#">View Cart</a></li>
                                         <li><a href="#">Wishlist</a></li>
