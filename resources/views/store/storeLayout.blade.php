@@ -9,12 +9,26 @@
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
     <title>Web site E-Commerce</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
    
 </head>
 
 <body>
+    
+    <style>
+        .img {
+            border: 5px solid #ddd;
+            border-radius: 5px;
+          }
+          
+          .img:hover {
+            box-shadow: 0 0 5px 5px rgba(9, 103, 211, 0.5);
+          }
+          
+    </style>
     <!-- HEADER -->
     <header>
         <!-- TOP HEADER -->
@@ -135,17 +149,7 @@
                 break;
                
                 @endphp
-                <div class="col-md-4 col-xs-6">
-                    <div class="shop">
-                        <div class="shop-img">
-                            <img src="./img/shop0{{$index++}}.png" alt="">
-                        </div>
-                        <div class="shop-body">
-                            <h3>{{$c->name}}</h3>
-                            <a href="search?c={{$c->id}}" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+               
                 <!-- /shop -->
                 @endforeach
             </div>
@@ -156,9 +160,9 @@
     </div>
     <!-- SECTION -->
 
-
+     <br>
     @yield('content')
-
+     <br><br>
     <!-- /SECTION -->
     
     <section class="home-newsletter">

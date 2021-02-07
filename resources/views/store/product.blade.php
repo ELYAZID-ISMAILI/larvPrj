@@ -9,24 +9,22 @@
 <!-- SECTION -->
 <div class="section">
     <!-- container -->
-    <div class="container">
+    <div class="container-fluid"><br>
         <!-- row -->
         <div class="row">
             <!-- Product main img -->
-            <div class="col-md-5 ">
+            <div class="col-xl-5 ">
                 <div id="product-main-img">
                     <div class="product-preview">
-                        <img src="../uploads/products/{{$product->id}}/{{$product->image_name}}" alt="">
+                        <img class="img" src="../uploads/products/{{$product->id}}/{{$product->image_name}}" alt="" style="width:500px; height:500px;">
                     </div>
                 </div>
             </div>
             <!-- /Product main img -->
-
-
             <!-- Product details -->
-            <div class="col-md-5">
+            <div class="col-xl-6 border " >
                 <div class="product-details">
-                    <h2 class="product-name">{{$product->name}}</h2>
+                    <h3 class="product-name">{{$product->name}}</h3>
                     <div>
                         <div class="product-rating">
                             <i class="fa fa-star"></i>
@@ -37,41 +35,31 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="product-price"> {{$product->discount}} DH <del class="product-old-price"> {{$product->price}} DH</del></h3>
-                        <span class="product-available">In Stock</span>
+                        <h3 style="color:rgb(3, 100, 245);font-weight:bold;font-size:20px;"> {{$product->discount}} DH <del style="color:rgb(150, 8, 8);"> {{$product->price}} DH</del></h3>
+                        <span style="color:rgb(172, 10, 10);font-weight:bold">In Stock</span>
                     </div>
-                    <p>{!!$product->description!!}</p>
+                    <p><span style="color:rgb(48, 59, 216);font-weight:bold">Description:</span> <br>{!!$product->description!!}</p>
                     <form method="post" id="order_form">
-                    {{csrf_field()}}
-                    <div class="product-options" >
-                        <input type="hidden" id="discount_price_holder" name="discount_price_holder" value={{$product->discount}}>
-                        <label>
+                     {{csrf_field()}}
+                        <div class="form-group row mb-3" style="padding-left: 15px;">
+                           <span style="color:rgb(48, 59, 216);font-weight:bold">Quantity:&nbsp;&nbsp;</span>
+                           <button type="button" id="sub" class="btn btn-secondary col-sm-1">-</button>
+                           <input type="number" id="quantity" name="quantity" class=" form-control col-sm-3" value="1" min="1" max="100"  />
+                           <button type="button" id="add" class="btn btn-secondary col-sm-1">+</button>&nbsp;&nbsp;
                         
-                        <div id="field1">Quantity
-                        <button type="button" id="sub" class="sub">-</button>
-                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="100"  />
-                        <button type="button" id="add" class="add">+</button>
-                    </div>
-                        
-                        </label>
-                        
-                        
-                        @foreach($colors as $c)
-                        <input type="radio" name="color"  value="{{$c}}">
-                        <div style="height:25px;width:25px;margin:5px;display:inline-block;background-color: {{$c}}"></div>
-                        @endforeach
-                          
-                    </div>
+                           @foreach($colors as $c)
+                          <input type="radio" name="color" value="{{$c}}" checked/>
+                          <div class="col-sm-1" style="height:25px;width:25px;margin:5px;display:inline-block;background-color: {{$c}}"></div>
+                          @endforeach
+                        </div>  
                         <div id="for_error"></div>
-
-                    <div class="add-to-cart">
-                        <button type="submit" name="myButton" id="myButton" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                    </div>
+                         <button type="submit" name="myButton" id="myButton" class="btn btn-success"> add to cart</button>
                     </form>
-                    <ul class="product-links">
-                        <li>Category:</li>
-                        <li><a href="{{route('user.search')}}?c={{$product->category->id}}">{{$product->category->name}}</a></li>
-                    </ul>
+                    <p>
+                        <span style="color:rgb(48, 59, 216);font-weight:bold"> Category:&nbsp;&nbsp;</span>
+                        <a href="{{route('user.search')}}?c={{$product->category->id}}">{{$product->category->name}}</a><br>
+                        <span><span style="color:rgb(48, 59, 216);font-weight:bold">Tags: &nbsp;</span>{{$product->tag}}</span>
+                    </p>
                 </div>
             </div>
             <!-- /Product details -->
@@ -81,7 +69,6 @@
     </div>
     <!-- /container -->
 </div>
-<div style="height:200px"></div>
 
 <!--JQUERY Validation-->
 <script>
@@ -109,12 +96,12 @@
 		
 	});
 	
-    $('.add').click(function () {
+    $('#add').click(function () {
         
         $(this).prev().val(+$(this).prev().val() + 1);
         
     });
-    $('.sub').click(function () {
+    $('#sub').click(function () {
             if ($(this).next().val() > 1) {
             $(this).next().val(+$(this).next().val() - 1);
             }

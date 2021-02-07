@@ -1,6 +1,7 @@
 /* Made with love by Mutiullah Samim*/
 
-@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html{font-family: 'Neuton', serif;}
 
 #backgr{
 background-image: url('https://www.york.ac.uk/media/study/courses/undergraduate/electronics/EE-comp-BEng-ind.jpg');
