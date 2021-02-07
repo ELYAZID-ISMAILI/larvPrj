@@ -90,6 +90,7 @@ margin-left: 4px;
 .home-newsletter {
     padding: 80px 20;
     background: #d3a8a8;
+    
     }
 
 .home-newsletter .single {
@@ -236,3 +237,31 @@ margin-left: 4px;
  #backgr{
    background-image:url("img/y");
  }
+ 
+ .navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+footer
+{
+    text-align:justify;
+    position: fixed;
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+    
+}
+.bg-dark h3{
+  color:#be2424;
+}
+.bg-dark a,p{
+  color:#fff;
+}
+#top-header{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #1E1F29;
+}
+.sea{
+  display: inline-block;
+}
