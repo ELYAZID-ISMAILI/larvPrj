@@ -1,11 +1,6 @@
 @extends('store.storeLayout')
 @section('content')
-<script src="{{asset('js/lib/jquery.js')}}"></script>
-<script src="{{asset('js/dist/jquery.validate.js')}}"></script>
  <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<link type="text/css" rel="stylesheet" href="{{asset('css/style_for_quantity.css')}}" />
-
 <!-- SECTION -->
 <div class="section">
     <!-- container -->
@@ -38,7 +33,7 @@
                         <h3 style="color:rgb(3, 100, 245);font-weight:bold;font-size:20px;"> {{$product->discount}} DH <del style="color:rgb(150, 8, 8);"> {{$product->price}} DH</del></h3>
                         <span style="color:rgb(172, 10, 10);font-weight:bold">In Stock</span>
                     </div>
-                    <p><span style="color:rgb(48, 59, 216);font-weight:bold">Description:</span> <br>{!!$product->description!!}</p>
+                    <p><span style="color:rgb(48, 59, 216);font-weight:bold">Description:</span> <br><span style="color: black;"> {{$product->description}} </span></p>
                     <form method="post" id="order_form">
                      {{csrf_field()}}
                         <div class="form-group row mb-3" style="padding-left: 15px;">
@@ -58,7 +53,7 @@
                     <p>
                         <span style="color:rgb(48, 59, 216);font-weight:bold"> Category:&nbsp;&nbsp;</span>
                         <a href="{{route('user.search')}}?c={{$product->category->id}}">{{$product->category->name}}</a><br>
-                        <span><span style="color:rgb(48, 59, 216);font-weight:bold">Tags: &nbsp;</span>{{$product->tag}}</span>
+                        <span><span style="color:rgb(48, 59, 216);font-weight:bold">Tags: &nbsp;</span><span style="color: black;">{{$product->tag}}</span></span>
                     </p>
                 </div>
             </div>

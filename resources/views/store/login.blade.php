@@ -38,7 +38,7 @@
                     
                         <tr>
                             <td>
-                                <li> {{session('message')}}</li>
+                                <li class="alert alert-danger" role="alert" style="list-style-type: none;"> {{session('message')}}</li>
                             </td>
                         </tr>
                         

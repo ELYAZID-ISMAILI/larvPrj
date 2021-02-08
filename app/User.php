@@ -20,6 +20,9 @@ class User extends Model
         'prev_password',
         'address_id'
     ];
+    protected $hidden = [
+        'password', 'prev_password',
+    ];
 
     public function addresses()
     {
