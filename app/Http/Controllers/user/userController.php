@@ -329,8 +329,9 @@ class userController extends Controller
                 $sales->product_id=session('cart');
                 $sales->order_status='Placed';
                 $sales->price=session('price');
-               
+                
                 $sales->save();
+
            // dd(1);
             Session::forget('cart');
             Session::forget('price');

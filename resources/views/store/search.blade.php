@@ -20,7 +20,8 @@
                                     <img class="img" src="uploads/products/{{$product->id}}/{{$product->image_name}}" alt="" style="width:300px; height:300px;" >
                                     </a>
                                 <div>
-                                    <span style="color:rgb(172, 10, 10);font-weight:bold">Offer!!</span>
+                                    <span  style="color:rgb(172, 10, 10);font-weight:bold">Offer!!</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:rgb(172, 10, 10);font-weight:bold"> {{$product->stock}}  In Stock!!</span>
                                 </div>
                                 <div class="product-rating">
                                     <i class="fa fa-star"></i>

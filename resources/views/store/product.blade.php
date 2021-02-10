@@ -31,7 +31,7 @@
                     </div>
                     <div>
                         <h3 style="color:rgb(3, 100, 245);font-weight:bold;font-size:20px;"> {{$product->discount}} DH <del style="color:rgb(150, 8, 8);"> {{$product->price}} DH</del></h3>
-                        <span style="color:rgb(172, 10, 10);font-weight:bold">In Stock</span>
+                        <span style="color:rgb(172, 10, 10);font-weight:bold"> {{$product->stock}}  In Stock!!</span> 
                     </div>
                     <p><span style="color:rgb(48, 59, 216);font-weight:bold">Description:</span> <br><span style="color: black;"> {{$product->description}} </span></p>
                     <form method="post" id="order_form">

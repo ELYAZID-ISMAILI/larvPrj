@@ -33,7 +33,8 @@
                                 <div class="product-img"><br>
                                     
                                     <div class="product-label">
-                                        <span  style="color:rgb(172, 10, 10);font-weight:bold">Offer!!</span>
+                                        <span  style="color:rgb(172, 10, 10);font-weight:bold">Offer!!</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:rgb(172, 10, 10);font-weight:bold"> {{$product->stock}}  In Stock!!</span> 
                                     </div>
                                 </div>
                                 <div class="product-body">

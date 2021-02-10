@@ -49,6 +49,10 @@
                                             <label >Product Discounted Price</label>
                                             <input type="text" class="form-control"  name="Discounted_Price" value="{{$product->discount}}">
                                         </div>
+                                        <div class="form-group">
+                                            <label  >Stock Quantity*</label>
+                                            <input type="text" class="form-control" id="Stock"  name="Stock" value="{{$product->stock}}">
+                                        </div>
                                         
                                         <div class="form-group ">
                                             <label >Product Colors</label>
@@ -77,7 +81,7 @@
                                         @foreach($errors->all() as $err)
                                         <tr>
                                             <td>
-                                                <li>{{$err}}</li>
+                                                <li class="alert alert-danger" role="alert" style="list-style-type: none;">{{$err}}</li>
                                             </td>
                                         </tr>
                                         @endforeach

@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->text('colors');
             $table->integer('price');
             $table->integer('discount');
+            $table->integer('stock');
             $table->text('tag');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')

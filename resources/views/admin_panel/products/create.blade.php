@@ -1,8 +1,4 @@
 @extends('admin_panel.adminLayout') @section('content')
-<script src="{{asset('js/lib/jquery.js')}}"></script>
-<script src="{{asset('js/dist/jquery.validate.js')}}"></script>
-<script src="{{asset('js/dist/additional-methods.js')}}"></script>
-
 <style>label.error {
   color: #a94442;
   background-color: #f2dede;
@@ -57,6 +53,10 @@
                                             <label  >Product Discounted Price*</label>
                                             <input type="text" class="form-control" id="Discounted_Price"  name="Discounted_Price" value="">
                                         </div>
+                                        <div class="form-group">
+                                            <label  >Stock Quantity*</label>
+                                            <input type="text" class="form-control" id="Stock"  name="Stock" value="">
+                                        </div>
                                         
                                         <div class="form-group ">
                                             <label  >Product Colors*</label>
@@ -85,7 +85,7 @@
                                         @foreach($errors->all() as $err)
                                         <tr>
                                             <td>
-                                                <li>{{$err}}</li>
+                                                <li class="alert alert-danger" role="alert" style="list-style-type: none;">{{$err}}</li>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -230,6 +230,10 @@ function addColor(){
 					required: true,
 					number: true
 				},
+                Stock: {
+					required: true,
+					number: true
+				},
                 colors: "required",
                 Tags: "required"
                 
@@ -253,6 +257,10 @@ function addColor(){
                 Discounted_Price: {
 					required: "No Price is Entered",
 					number: "Invalid Price"
+				},
+                Stock: {
+					required: "No Stock is Entered",
+					number: "Invalid Stock"
 				},
                 colors: "No Color is Selected",
                 Tags: "No Tags is Selected",

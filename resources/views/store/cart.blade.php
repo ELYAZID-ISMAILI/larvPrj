@@ -41,10 +41,10 @@
                         <tr id="deleteItem_{{$c[3]}}">
                             <td><button type="button" id="delete_item"  value={{$c[3]}} name="delete_item"  class="delete_item btn btn-danger" onClick="window.location.reload();">X</button></td>
                             <td> <img src="uploads/products/{{$p->id}}/{{$p->image_name}}" height="50px" width="50px"> {{$p->name}}
-                            <td>
-                                <button type="button" id="sub" value={{$p->id}} class="btn btn-secondary sub" data-rel={{$c[3]}} data-rel2={{$p->discount}}>-</button>
-                                <input type="number" id="quantity" name={{$p->id}} class=" form-control quantity" value={{$c[1]}} min="1" max="100" />
-                                <button type="button" id="add" value={{$p->id}} data-rel={{$c[3]}} data-rel2={{$p->discount}} class="btn btn-secondary add">+</button>  
+                            <td class="row">
+                                <button type="button" id="sub" value={{$p->id}} class="btn btn-secondary sub col-2" data-rel={{$c[3]}} data-rel2={{$p->discount}}>-</button>
+                                <input type="number" id="quantity" name={{$p->id}} class=" form-control quantity col-6" value={{$c[1]}} min="1" max="100" />
+                                <button type="button" id="add" value={{$p->id}} data-rel={{$c[3]}} data-rel2={{$p->discount}} class="btn btn-secondary add col-2">+</button>  
                             </td>
                             <td>
                             <div style="height:25px;width:25px;display:inline-block;background-color: {{$c[2]}}"></div>  
@@ -85,7 +85,7 @@
                     </div><br>
                     @else
                     <div class="order-col">
-                        <h3 style="color:rgb(172, 10, 10);font-weight:bold">Your Cart is Empty!!</h3>
+                        <h3  style="color:rgb(172, 10, 10);font-weight:bold; text-align: center;">Your Cart is Empty!!</h3>
                     </div><br>
                     @endif
                     
@@ -105,59 +105,59 @@
                 @else
                  @if(!session('user'))
                 <div class="row   border-top ">
-                    <form id="signupForm" method="post" style="padding-left:10%;">
+                    <form id="signupForm" method="post">
                         {{csrf_field()}}
                         <div class="form-row">
                             <div class="form-group col-md-8">
                                 <label for="name">Full Name</label>
                                 <input class="form-control" type="text" name="name" id="name" placeholder="Full Name">
                             </div>
-                                {!! $errors->first('name', '<label class="error">:message</label>') !!}
+                                {!! $errors->first('name', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                             <div class="form-group col-md-10">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" onkeyup="myFunction()">
                             </div>
                             <div id="for_duplicate-email"></div>
-                             {!! $errors->first('email', '<label class="error">:message</label>') !!}
+                             {!! $errors->first('email', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-8">
                                 <label for="address">Address</label>
                                 <input class="form-control" type="text" name="address" id="address" placeholder="Address">
                             </div>
-                              {!! $errors->first('address', '<label class="error">:message</label>') !!}
+                              {!! $errors->first('address', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                     <label for="city">City</label>
                                     <input class="form-control" type="text" name="city" id="city" placeholder="City">
                             </div>
-                                 {!! $errors->first('city', '<label class="error">:message</label>') !!}
+                                 {!! $errors->first('city', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                         
                             <div class="form-group col-md-4">
                                     <label for="zip">ZIP Code</label>
                                     <input class="form-control" type="text" name="zip" id="zip" placeholder="ZIP Code">
                             </div>
-                                 {!! $errors->first('zip', '<label class="error">:message</label>') !!}
+                                 {!! $errors->first('zip', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                             <div class="form-group col-md-5">
                                     <label for="tel">Telephone</label>
                                     <input class="form-control" type="tel" name="tel" id="tel" placeholder="Telephone">
                             </div>
-                                 {!! $errors->first('tel', '<label class="error">:message</label>') !!}
+                                 {!! $errors->first('tel', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                         </div>
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="pass">Enter Your Password</label>
                             <input type="password" class="form-control" name="pass" id="pass" placeholder="Password">
                           </div>
-                          {!! $errors->first('pass', '<label class="error">:message</label>') !!}
+                          {!! $errors->first('pass', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                         </div>
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="confirm_password">Confirm Password</label>
                             <input class="form-control" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
                           </div>
-                         {!! $errors->first('confirm_password', '<label class="error">:message</label>') !!}
+                         {!! $errors->first('confirm_password', '<label class="alert alert-danger" role="alert" style="list-style-type: none;">:message</label>') !!}
                         </div>
                        
                         <button type="submit" name="signup" class="btn btn-primary">Sign Up</button>

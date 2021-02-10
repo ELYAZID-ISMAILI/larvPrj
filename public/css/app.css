@@ -90,7 +90,7 @@ margin-left: 4px;
 }
 .home-newsletter {
     padding: 80px 20;
-    background: #d3a8a8;
+    background: #9eb3da;
     
     }
 
@@ -127,8 +127,8 @@ margin-left: 4px;
         text-align: center;
         text-decoration: none;
         margin: 5px 2px;
-        color: rgb(3, 70, 194);
-        border-radius: 50%; 
+        color: rgb(51, 117, 250);
+        border-radius: 25%; 
       }
 
       .fa:hover {
@@ -138,15 +138,18 @@ margin-left: 4px;
 
       .fa-facebook {
         background: #3B5998;
+        padding-left: 5px;
       }
 
       .fa-twitter {
         background: #55ACEE;
+        padding-left: 5px;
       }
 
 
       .fa-instagram {
         background: #e970ac;
+        padding-left: 5px;
       }
       newsletter-follow{
           text-align: center;

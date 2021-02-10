@@ -63,7 +63,7 @@
                                         @foreach($errors->all() as $err)
                                         <tr>
                                             <td>
-                                                <li>{{$err}}</li>
+                                                <li class="alert alert-danger" role="alert" style="list-style-type: none;">{{$err}}</li>
                                             </td>
                                         </tr>
                                         @endforeach

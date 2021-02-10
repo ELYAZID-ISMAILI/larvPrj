@@ -1,8 +1,5 @@
 @extends('store.storeLayout')
 @section('content')
-<script src="{{asset('js/lib/jquery.js')}}"></script>
-<script src="{{asset('js/dist/jquery.validate.js')}}"></script>
-
     <!-- SECTION -->
 <div class="section">
         <!-- container -->
