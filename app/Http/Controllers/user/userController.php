@@ -331,6 +331,20 @@ class userController extends Controller
                 $sales->price=session('price');
                 
                 $sales->save();
+                $totalCart = explode(',',Session::get('cart'));
+                foreach($totalCart as $c)
+                {
+                    $cart[]=explode(':',$c);
+                    $a=explode(':',$c);
+                    $res = Product::find($a[0]);
+                    $product[]=$res;
+                    foreach($product as $p){
+                        $p->stock = ($p->stock)-$a[1];
+                        $p->save();
+                    }
+                   
+                }
+
 
            // dd(1);
             Session::forget('cart');
