@@ -191,9 +191,13 @@
  
      var url="{{route('user.editCart')}}";
      var product_id= $(this).val();
+<<<<<<< HEAD
 
      if ($(this).prev().val() < this.getAttribute('data-stk')) 
          {  
+=======
+     
+>>>>>>> f6aa534e1fceefb40130b99579a18ed6c5408be5
      $(this).prev().val(+$(this).prev().val() + 1);
      var x=$(this).prev().val(); 
      var token=$("input[name=_token]").val();
@@ -214,7 +218,11 @@
              }
              });
        
+<<<<<<< HEAD
          }
+=======
+    
+>>>>>>> f6aa534e1fceefb40130b99579a18ed6c5408be5
      });
      $('.sub').click(function () {
          
