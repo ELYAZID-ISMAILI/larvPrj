@@ -79,7 +79,7 @@
                             <div class="w-50">
                                     <form action="{{route('user.search')}}" method="get">
                                         <div class="input-group">
-                                            <input type="search" class="form-control" placeholder="Search..." style="border-radius: 40px 0px 0px 40px;max-width: 500px;">
+                                            <input type="search" class="form-control" placeholder="Search..." name="n" style="border-radius: 40px 0px 0px 40px;max-width: 500px;">
                                             <span class="input-group-btn">
                                             <button class="btn btn-success" type="submit">Search</button>
                                             </span>
