@@ -79,7 +79,7 @@
                             <div class="w-50">
                                     <form action="{{route('user.search')}}" method="get">
                                         <div class="input-group">
-                                            <input type="search" class="form-control" placeholder="Search..." style="border-radius: 40px 0px 0px 40px;max-width: 500px;">
+                                            <input type="search" class="form-control" placeholder="Search..." name="n" style="border-radius: 40px 0px 0px 40px;max-width: 500px;">
                                             <span class="input-group-btn">
                                             <button class="btn btn-success" type="submit">Search</button>
                                             </span>
@@ -88,7 +88,7 @@
                             </div>
                             <div class="w-10"></div>
                             <div class="w-15 h-100" >
-                                    <div  class="navbar-nav">
+                                    <div  class="navbar-nav col-sm-3">
                                         
                                         <a class="dropdown-toggle " id="custom_shopping_cart" href="{{route('user.cart')}}">
                                             <i class="fa fa-shopping-cart"></i>
@@ -169,7 +169,7 @@
         <div class="container">
         <div class="row">
         <div class="col-sm-12">
-            <div class="single">
+            <div class="single"><br>
                 <h2>Subscribe to our Newsletter</h2>
             <div class="input-group">
                  <input type="email" class="form-control" placeholder="Enter your email">

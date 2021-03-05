@@ -91,7 +91,7 @@
                                                 @endif
 
                                                 @endforeach
-                                            </select>
+                                            </select>  
                                             <input type="submit" class="btn btn-sm btn-warning" value="Update">
                                         </form>
                                     </td>

@@ -31,16 +31,18 @@
                     </div>
                     <div>
                         <h3 style="color:rgb(3, 100, 245);font-weight:bold;font-size:20px;"> {{$product->discount}} DH <del style="color:rgb(150, 8, 8);"> {{$product->price}} DH</del></h3>
-                        <span style="color:rgb(172, 10, 10);font-weight:bold"> {{$product->stock}}  In Stock!!</span> 
+                        <span class="badge badge-warning" style="color:rgb(172, 10, 10);font-weight:bold" > {{$product->stock}}  In Stock!!</span> 
                     </div>
+                    <input type="hidden" id="hid" value="{{$product->stock}}">
                     <p><span style="color:rgb(48, 59, 216);font-weight:bold">Description:</span> <br><span style="color: black;"> {{$product->description}} </span></p>
+                    @if($product->stock > 0)
                     <form method="post" id="order_form">
                      {{csrf_field()}}
                         <div class="form-group row mb-3" style="padding-left: 15px;">
                            <span style="color:rgb(48, 59, 216);font-weight:bold">Quantity:&nbsp;&nbsp;</span>
-                           <button type="button" id="sub" class="btn btn-secondary col-sm-1">-</button>
-                           <input type="number" id="quantity" name="quantity" class=" form-control col-sm-3" value="1" min="1" max="100"  />
-                           <button type="button" id="add" class="btn btn-secondary col-sm-1">+</button>&nbsp;&nbsp;
+                           <button type="button" id="sub" class="btn btn-secondary   rounded-circle">-</button>
+                           <input type="number" id="quantity" name="quantity" class=" form-control col-2" value="1" min="1" max="{{$product->stock}}"  />
+                           <button type="button" id="add" class="btn btn-secondary  rounded-circle">+</button>&nbsp;&nbsp;
                         
                            @foreach($colors as $c)
                           <input type="radio" name="color" value="{{$c}}" checked/>
@@ -50,6 +52,9 @@
                         <div id="for_error"></div>
                          <button type="submit" name="myButton" id="myButton" class="btn btn-success"> add to cart</button>
                     </form>
+                    @else
+                    <h3 style="color:rgb(172, 10, 10);font-weight:bold">Sorry The Product is not in Stock!! </h3>
+                    @endif
                     <p>
                         <span style="color:rgb(48, 59, 216);font-weight:bold"> Category:&nbsp;&nbsp;</span>
                         <a href="{{route('user.search')}}?c={{$product->category->id}}">{{$product->category->name}}</a><br>
@@ -90,10 +95,11 @@
 
 		
 	});
-	
+    var a=document.getElementById("hid").value;
+    var b=parseInt(a)
     $('#add').click(function () {
-        
-        $(this).prev().val(+$(this).prev().val() + 1);
+            if ($(this).prev().val() < b) {
+        $(this).prev().val(+$(this).prev().val() + 1);}
         
     });
     $('#sub').click(function () {

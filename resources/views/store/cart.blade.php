@@ -39,12 +39,12 @@
 					      @foreach($prod as $p)
 					      @if($c[0]==$p->id)
                         <tr id="deleteItem_{{$c[3]}}">
-                            <td><button type="button" id="delete_item"  value={{$c[3]}} name="delete_item"  class="delete_item btn btn-danger" onClick="window.location.reload();">X</button></td>
+                            <td><button type="button" id="delete_item"  value={{$c[3]}} name="delete_item"  class="delete_item btn btn-danger" onClick="window.location.reload(false)">X</button></td>
                             <td> <img src="uploads/products/{{$p->id}}/{{$p->image_name}}" height="50px" width="50px"> {{$p->name}}
                             <td class="row">
-                                <button type="button" id="sub" value={{$p->id}} class="btn btn-secondary sub col-2" data-rel={{$c[3]}} data-rel2={{$p->discount}}>-</button>
-                                <input type="number" id="quantity" name={{$p->id}} class=" form-control quantity col-6" value={{$c[1]}} min="1" max="100" />
-                                <button type="button" id="add" value={{$p->id}} data-rel={{$c[3]}} data-rel2={{$p->discount}} class="btn btn-secondary add col-2">+</button>  
+                                <button type="button" id="sub" value={{$p->id}} class="btn btn-secondary sub  rounded-circle" data-rel={{$c[3]}} data-rel2={{$p->discount}}>-</button>
+                                <input type="number" id="quantity" name={{$p->id}} class=" form-control quantity col-6" value={{$c[1]}} min="1" max="{{$p->stock}}" />
+                                <button type="button" id="add" value={{$p->id}} data-rel={{$c[3]}} data-rel2={{$p->discount}} data-stk={{$p->stock}} class="btn btn-secondary add rounded-circle">+</button>  
                             </td>
                             <td>
                             <div style="height:25px;width:25px;display:inline-block;background-color: {{$c[2]}}"></div>  
@@ -184,11 +184,16 @@
 <script>
     
     //TO DO: ajax will take place
+   
+    
      
      $('.add').click(function () {
  
      var url="{{route('user.editCart')}}";
-     var product_id= $(this).val(); 
+     var product_id= $(this).val();
+
+     if ($(this).prev().val() < this.getAttribute('data-stk')) 
+         {  
      $(this).prev().val(+$(this).prev().val() + 1);
      var x=$(this).prev().val(); 
      var token=$("input[name=_token]").val();
@@ -208,8 +213,8 @@
                  document.getElementById("totalCost").innerHTML = msg[2]+" DH";
              }
              });
-         
-    
+       
+         }
      });
      $('.sub').click(function () {
          

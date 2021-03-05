@@ -57,13 +57,15 @@ class managementController extends Controller
     }
     public function update(Request $r)
     {
-    	$n=sale::find($r->orderId);
-
+        if($r->stat !='Placed' && $r->stat !='On Process' && $r->stat !='Delivered' && $r->stat !='Cancel'){
+            return redirect()->route('admin.orderManagement');
+        }else{
+        $n=sale::find($r->orderId);
     	if($n)
     	{
     		$n->order_status=$r->stat;
     		$n->save();
-    	}
+    	}}
 
     	
 
